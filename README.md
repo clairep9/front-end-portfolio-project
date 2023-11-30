@@ -6,3 +6,4 @@ The project is split into multiple files, with each file relating to a specific 
 The header and footer are consistent throughout each page. When you hover on the links in the header, their color changes to white. When you hover on the links in the footer, their color changes to gold. While the header links take you to their respective pages, the footer links are just for visual purposes. 
 When you search for a movie in the home page, popular page and now playing pages, it directs you to the search.html. However, you need to search up the movie one more time to get any result. 
 If you click on the search button, yet the value in the input bar is empty, the default behavior of the click event (displaying movies) is prevented.
+There are some media queries depending on your screen size. Refer to the bottom of each css file. 
