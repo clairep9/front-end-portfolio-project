@@ -2,10 +2,11 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background: url("images/background.jpeg") center/cover no-repeat fixed; 
-    position: relative
+    background: url("images/background.jpeg") ; 
+    background-size: cover;
 }
 
+/* same header */
 .movie-icon {
     font-size: 30px; 
     margin-right: 3px; 
@@ -13,12 +14,9 @@ body {
 }
 
 header {
-    position: relative;
-    z-index: 1;
     background-color: #333;
     color: gold;
-    padding: 1rem;
-    text-align: center;
+    padding: 16px;
     display: flex;
     align-items: center;
 }
@@ -36,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 30px;
+    margin-right: 15px;
 }
 
 nav a {
@@ -50,20 +48,17 @@ nav a:hover {
     color: white
 }
 
-nav a.active{
+.nav-link:active{
     color: white;
 }
 
 .hero {
     height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color:#fff;
-    position: relative;
-    z-index: 2;
 }
 
 .hero h2 {
@@ -76,7 +71,8 @@ nav a.active{
     border-radius: 10px;
 }
 
-.cta-button {
+.cta-button1,
+.cta-button2 {
     display: inline-block;
     padding: 10px 20px;
     margin-top: 20px;
@@ -96,7 +92,7 @@ nav a.active{
     align-items: center;
 }
 
-.search-bar input {
+ input[type="text"] {
     padding: 8px;
     margin-left: 250px;
     margin-right: 5px;
@@ -104,7 +100,7 @@ nav a.active{
     border-radius: 7px;
 }
 
-.search-bar button {
+.search-bar #search-button {
     padding: 8px;
     color: white; 
     background-color: #ff6666; 
@@ -119,8 +115,13 @@ nav a.active{
 .search-bar button:hover {
     background-color: red;
 }
+/* same header */
 
-.cta-button:hover {
+.cta-button1:hover {
+    background-color: red;
+}
+
+.cta-button2:hover {
     background-color: red;
 }
 
@@ -150,63 +151,28 @@ footer {
 }
 
 
+/* media queries */
+@media screen and (min-width: 501px) and (max-width: 600px) {
+    /* for smaller screens */
+    .search-bar input {
+        display: none;
+    }
 
-
-
-
-
-
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+    .header {
+        margin-right: 75px;
+    }
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
 
-section {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.movie {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
+/* For screens larger than 999px */
+@media screen and (min-width: 999px) {
+    .search-bar input {
+        width: 350px; 
+        margin-left: 65px;
+    }
 
-.movie:hover {
-    transform: scale(1.05);
+    #search-button {
+        margin-left: 2px;
+    }
 }
-
-.movie img {
-    width: 100px;
-    height: 150px;
-    object-fit: cover;
-    margin-right: 20px;
-}
-
-.movie-details {
-    flex-grow: 1;
-}
-
-h2 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
-p {
-    margin: 10px 0;
-    color: #666;
-} */

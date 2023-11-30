@@ -1,22 +1,23 @@
+document.getElementById('search-button').addEventListener('click', function () {
+    const searchTerm = document.getElementById('searchInput').value.trim();
+
+    // Check if the search input is empty
+    if (searchTerm === '') {
+        return;
+}
+})
+
 const apiKey = 'af9c81ab03d2903e1aa375a7e6f24399';
 const apiUrl = 'https://api.themoviedb.org/3';
 
-
-
-// Function to fetch popular movies
-async function fetchPopularMovies() {
-    try {
-        const response = await fetch(`${apiUrl}/movie/popular?api_key=${apiKey}`);
-        const data = await response.json();
-
-        // Display movies
-        displayMovies(data.results);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+function fetchPopularMovies() {
+    fetch(`${apiUrl}/movie/popular?api_key=${apiKey}`)
+        .then(response => response.json())
+        .then(data => displayMovies(data.results))
+        .catch(error => console.error('Error fetching popular movies:', error));
 }
 
-// Function to display movies in HTML
+// display movies in HTML
 function displayMovies(movies) {
     const movieContainer = document.getElementById('movie-container');
 
@@ -41,7 +42,7 @@ function displayMovies(movies) {
         
         const voteAverage = document.createElement('p');
         voteAverage.classList.add("vote-average")
-        voteAverage.textContent = `Vote Average: ${movie.vote_average}`
+        voteAverage.textContent = `⭐Vote Average: ${movie.vote_average}⭐`
 
         movieCard.appendChild(title);
         movieCard.appendChild(poster);
@@ -53,8 +54,7 @@ function displayMovies(movies) {
     });
 }
 
-// Fetch popular movies when the page loads
-window.onload = fetchPopularMovies;
+fetchPopularMovies();
 
 
 

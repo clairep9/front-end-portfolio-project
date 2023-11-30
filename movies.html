@@ -4,23 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="movies.css">
+    <script defer src="movies.js"></script>
 </head>
 <body>
     <header>
         <span class="movie-icon">🎬</span>
-        <h1 class="header">MovieSurf</h1>
+        <h1 class="header">MovieFans</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
+                <li><a href="movies.html">Now Playing</a></li>
                 <li><a href="popular.html">Popular</a></li>
             </ul>
         </nav>
+        <form action="search.html" method="get">
         <div class="search-bar">
-            <input type="text" placeholder="Search for movies...">
-            <button type="submit">Search</button>
+            <input name="search" id="searchInput" type="text" placeholder="Search for movies...">
+            <input id="search-button" value="Search" type="submit" />
         </div>
+    </form>
     </header>
+
+    <div id="now-playing-container"></div>
+
     <footer>
         <div class="footer-content">
             <div class="social-media">
@@ -33,7 +40,6 @@
                 <a href="#">Terms of Use</a>
             </div>
         </div>
-    </footer>
-    
+    </footer>  
 </body>
 </html>

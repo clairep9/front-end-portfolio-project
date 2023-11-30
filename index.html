@@ -13,23 +13,26 @@
         <h1 class="header">MovieFans</h1>
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movies.html">Movies</a></li>
-                <li><a href="popular.html">Popular</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="movies.html" class="nav-link">Now Playing</a></li>
+                <li><a href="popular.html" class="nav-link">Popular</a></li>
             </ul>
         </nav>
+        <form action="search.html" method="get">
         <div class="search-bar">
-            <input type="text" placeholder="Search for movies...">
-            <button type="submit">Search</button>
+            <input name="search" id="searchInput" type="text" placeholder="Search for movies...">
+            <input id="search-button" value="Search" type="submit" />
         </div>
+    </form>
+
     </header>
     
     <section id="home" class="hero">
         <div class="overlay">
             <h2>Welcome to MovieFans</h2>
-            <p>Discover and explore a world of movies with our vast collection.</p>
-            <a href="movies.html" class="cta-button">Explore Movies</a>
-            <a href="popular.html" class="cta-button">Most Popular</a>
+            <p>Discover a world of movies.</p>
+            <a href="movies.html" class="cta-button1">Now Playing</a>
+            <a href="popular.html" class="cta-button2">Most Popular</a>
         </div>
     </section>
     <footer>

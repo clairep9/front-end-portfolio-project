@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="popular.css">
-    <script defer src="popular.js"></script>
+    <link rel="stylesheet" href="search.css">
+    <script defer src="search.js"></script>
 </head>
 <body>
     <header>
@@ -18,15 +18,12 @@
                 <li><a href="popular.html">Popular</a></li>
             </ul>
         </nav>
-        <form action="search.html" method="get">
-            <div class="search-bar">
-                <input name="search" id="searchInput" type="text" placeholder="Search for movies...">
-                <input id="search-button" value="Search" type="submit" />
-            </div>
-        </form>
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Search for movies...">
+            <button id="search-button" type="submit">Search</button>
+        </div>
     </header>
-    <div id="movie-container"></div>
-
+    <main id="search-results"></main>
     <footer>
         <div class="footer-content">
             <div class="social-media">
@@ -40,6 +37,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>
